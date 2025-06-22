@@ -1,6 +1,7 @@
 
 from space_clash_final_folder.space_clash_final.logic.ScoreManager import ScoreManager
-from space_clash_final_folder.space_clash_final.utils.Settings import *
+# from space_clash_final_folder.space_clash_final.utils.Settings import *
+from space_clash_final_folder.space_clash_final.assets.assets import *
 
 
 class GameOverScreen:
@@ -52,12 +53,13 @@ class GameOverScreen:
 
     # Draw the headers, input and buttons
     def draw(self):
-        self.screen.fill(GRAY)
+        # self.screen.fill(GRAY)
+        self.screen.blit(SPACE_MAIN, (0, 0))
 
-        title = FONT_TITLE.render("Game Over!", True, RED)
-        score = FONT_BUTTON.render(f"Your Score: {self.current_score}", True, BLACK)
-        label = FONT_DEFAULT.render("Enter Your Name:", True, BLACK)
-        name_text = FONT_DEFAULT.render(self.player_name, True, BLACK)
+        title = FONT_SMALL_LARGE.render("Game Over!", True, RED)
+        score = FONT_MEDIUM.render(f"Your Score: {self.current_score}", True, WHITE)
+        label = FONT_SMALL.render("Enter Your Name:", True, WHITE)
+        name_text = FONT_SMALL.render(self.player_name, True, BLACK)
 
         # Define and draw the headers
         title_rect = title.get_rect(center=(SCREEN_WIDTH // 2, 100))

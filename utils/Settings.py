@@ -30,10 +30,11 @@ DARK_GRAY = (100, 100, 100)
 INDIGO = (75, 0, 130)
 PURPLE = (128, 0, 128)
 YELLOW = (255, 255, 0)
+DARK_YELLOW = (220, 220, 20)
 
 # --- Player settings ---
-PLAYER_WIDTH = 55
-PLAYER_HEIGHT = 55
+PLAYER_WIDTH = 70
+PLAYER_HEIGHT = 70
 PLAYER_SPEED = 8
 PLAYER_START_Y = SCREEN_HEIGHT - 60
 
@@ -61,8 +62,14 @@ TOP_SCORES_DISPLAY = 15
 RECORDS_FILE_PATH = "game_records.json"
 
 # --- Fonts ---
-FONT_DEFAULT = pygame.font.Font(None, 36)
-FONT_TITLE = pygame.font.Font(None, 72)
+FONT_SMALL_SMALL = pygame.font.Font(None, 24)
+FONT_SMALL = pygame.font.Font(None, 36)
+FONT_SMALL_MEDIUM = pygame.font.Font(None, 42)
+FONT_MEDIUM = pygame.font.Font(None, 56)
+FONT_SMALL_LARGE = pygame.font.Font(None, 72)
+FONT_LARGE = pygame.font.Font(None, 90)
+FONT_HUGH = pygame.font.Font(None, 120)
+
 FONT_BUTTON = pygame.font.Font(None, 50)
 
 # --- Screen identifiers ---

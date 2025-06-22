@@ -44,7 +44,7 @@ class GameScreen:
         self.game.player.shot_color = self.game_settings["bullet_color"]
 
         # Score
-        score = FONT_DEFAULT.render(f"Score: {self.game.get_score()}", True, WHITE)
+        score = FONT_SMALL.render(f"Score: {self.game.get_score()}", True, WHITE)
         self.screen.blit(score, score.get_rect(center=(SCREEN_WIDTH // 2, 20)))
 
         # Pause button
@@ -52,13 +52,13 @@ class GameScreen:
         mouse_pos = pygame.mouse.get_pos()
         pause_color = DARK_GRAY if self.pause_button_rect.collidepoint(mouse_pos) else GRAY
         pygame.draw.rect(self.screen, pause_color, self.pause_button_rect, border_radius=5)
-        pause_label = FONT_DEFAULT.render(pause_text, True, BLACK)
+        pause_label = FONT_SMALL.render(pause_text, True, BLACK)
         self.screen.blit(pause_label, pause_label.get_rect(center=self.pause_button_rect.center))
 
         # Menu button
         menu_color = DARK_GRAY if self.menu_button_rect.collidepoint(mouse_pos) else GRAY
         pygame.draw.rect(self.screen, menu_color, self.menu_button_rect, border_radius=5)
-        menu_label = FONT_DEFAULT.render("Back to Menu", True, BLACK)
+        menu_label = FONT_SMALL.render("Back to Menu", True, BLACK)
         self.screen.blit(menu_label, menu_label.get_rect(center=self.menu_button_rect.center))
 
         # Pause overlay
@@ -67,7 +67,7 @@ class GameScreen:
             overlay.fill((0, 0, 0, 128))
             self.screen.blit(overlay, (0, 0))
 
-            paused_text = FONT_TITLE.render("Paused", True, WHITE)
+            paused_text = FONT_SMALL_LARGE.render("Paused", True, WHITE)
             self.screen.blit(paused_text, paused_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)))
 
     # Reset the game

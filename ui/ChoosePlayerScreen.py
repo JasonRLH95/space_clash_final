@@ -121,7 +121,7 @@ class ChoosePlayerScreen:
 
     # Draw the headers and buttons groups on the screen
     def draw(self):
-        self.screen.fill(GRAY)
+        self.screen.blit(SPACE_MAIN, (0, 0))
 
         # Draw the Back button.
         mouse_pos = pygame.mouse.get_pos()
@@ -131,9 +131,9 @@ class ChoosePlayerScreen:
         self.screen.blit(back_text, back_text.get_rect(center=self.back_button_rect.center))
 
         # Draw headers for each option group.
-        header_bg = FONT_TITLE.render("Choose Background", True, INDIGO)
-        header_ship = FONT_TITLE.render("Choose Spaceship", True, INDIGO)
-        header_bullet = FONT_TITLE.render("Choose Bullets Color", True, INDIGO)
+        header_bg = FONT_SMALL_LARGE.render("Choose Background", True, WHITE)
+        header_ship = FONT_SMALL_LARGE.render("Choose Spaceship", True, WHITE)
+        header_bullet = FONT_SMALL_LARGE.render("Choose Bullets Color", True, WHITE)
 
         self.screen.blit(header_bg, header_bg.get_rect(center=(SCREEN_WIDTH // 2, 100)))
         self.screen.blit(header_ship, header_ship.get_rect(center=(SCREEN_WIDTH // 2, 320)))

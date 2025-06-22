@@ -39,12 +39,15 @@ YELLOW_SPACESHIP = pygame.transform.rotate(
     pygame.transform.scale(YELLOW_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 270)
 
 # Backgrounds
+SPACE_MAIN = pygame.transform.scale(
+    pygame.image.load(os.path.join("assets", "images", "space_background_main.jpg")), (SCREEN_WIDTH, SCREEN_HEIGHT)
+)
 SPACE_1 = pygame.transform.scale(
     pygame.image.load(os.path.join("assets", "images", "space_background_1.jpg")), (SCREEN_WIDTH, SCREEN_HEIGHT))
 SPACE_2 = pygame.transform.scale(
     pygame.image.load(os.path.join("assets", "images", "space_background_2.jpg")), (SCREEN_WIDTH, SCREEN_HEIGHT))
 SPACE_3 = pygame.transform.scale(
-    pygame.image.load(os.path.join("assets", "images", "space_background_3.jpg")), (SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.image.load(os.path.join("assets", "images", "space_background_3.webp")), (SCREEN_WIDTH, SCREEN_HEIGHT))
 SPACE_4 = pygame.transform.scale(
     pygame.image.load(os.path.join("assets", "images", "space_background_4.jpg")), (SCREEN_WIDTH, SCREEN_HEIGHT))
 

@@ -2,6 +2,7 @@
 
 from space_clash_final_folder.space_clash_final.logic.ScoreManager import ScoreManager
 from space_clash_final_folder.space_clash_final.utils.Settings import *
+from space_clash_final_folder.space_clash_final.assets.assets import *
 
 
 class HighScoresScreen:
@@ -18,31 +19,32 @@ class HighScoresScreen:
 
     # Draw the table of high scores according to data on the json file, limits to 15 best scores
     def draw(self):
-        self.screen.fill(GRAY)
+        # self.screen.fill(GRAY)
+        self.screen.blit(SPACE_1, (0, 0))
 
-        title = FONT_TITLE.render("High Scores", True, INDIGO)
+        title = FONT_SMALL_LARGE.render("High Scores", True, WHITE)
         self.screen.blit(title, title.get_rect(center=(SCREEN_WIDTH // 2, 50)))
 
         y_offset = 120
         records = self.score_manager.get_records()
 
         if not records:
-            no_data = FONT_DEFAULT.render("No records yet. Be the first!", True, DARK_GRAY)
+            no_data = FONT_SMALL.render("No records yet. Be the first!", True, GRAY)
             self.screen.blit(no_data, no_data.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)))
         else:
             headers = [("Rank", 200), ("Name", 400), ("Score", 750), ("Date", 950)]
             for text, x in headers:
-                header = FONT_DEFAULT.render(text, True, BLACK)
+                header = FONT_SMALL.render(text, True, WHITE)
                 self.screen.blit(header, (x, y_offset))
             y_offset += 40
 
             for i, record in enumerate(records[:TOP_SCORES_DISPLAY]):
-                color = INDIGO if i < 3 else BLACK
+                color = DARK_YELLOW if i < 3 else WHITE
 
-                rank = FONT_DEFAULT.render(f"{i + 1}.", True, color)
-                name = FONT_DEFAULT.render(record["name"], True, color)
-                score = FONT_DEFAULT.render(str(record["score"]), True, color)
-                date = FONT_DEFAULT.render(record.get("date", "N/A"), True, color)
+                rank = FONT_SMALL.render(f"{i + 1}.", True, color)
+                name = FONT_SMALL.render(record["name"], True, color)
+                score = FONT_SMALL.render(str(record["score"]), True, color)
+                date = FONT_SMALL.render(record.get("date", "N/A"), True, color)
 
                 self.screen.blit(rank, (200, y_offset))
                 self.screen.blit(name, (400, y_offset))

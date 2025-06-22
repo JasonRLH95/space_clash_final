@@ -104,14 +104,15 @@ class Menu:
 
     # Draw the text and buttons on screen
     def _draw_menu(self):
-        self.screen.fill(GRAY)
+        # self.screen.fill(GRAY)
+        self.screen.blit(SPACE_MAIN, (0, 0))
 
         # Draw the text on screen
-        title = FONT_TITLE.render("Space Clash", True, INDIGO)
-        subtitle = FONT_DEFAULT.render("An out of space adventure!", True, DARK_GRAY)
-        reserved_text = FONT_DEFAULT.render("® All rights reserved to JasonR95 ®", True, BLACK)
+        title = FONT_HUGH.render("Space Clash", True, WHITE)
+        subtitle = FONT_SMALL_MEDIUM.render("An out of space adventure!", True, RED)
+        reserved_text = FONT_SMALL_SMALL.render("® All rights reserved to JasonR95 ®", True, GRAY)
         self.screen.blit(title, title.get_rect(center=(SCREEN_WIDTH // 2, 100)))
-        self.screen.blit(subtitle, subtitle.get_rect(center=(SCREEN_WIDTH // 2, 170)))
+        self.screen.blit(subtitle, subtitle.get_rect(center=(SCREEN_WIDTH // 2, 190)))
         self.screen.blit(reserved_text, reserved_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT - 150)))
 
         # Draw buttons on screen
