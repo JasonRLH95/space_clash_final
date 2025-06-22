@@ -1,15 +1,15 @@
 
-
 from space_clash_final_folder.space_clash_final.interfaces.Entity import Entity
 from space_clash_final_folder.space_clash_final.utils.Settings import *
 from space_clash_final_folder.space_clash_final.logic.Bullet import Bullet
 
 
 class Player(Entity):
-    def __init__(self, spaceship, bullet_color):
+    def __init__(self, spaceship, bullet_color, is_paused):
         x = SCREEN_WIDTH // 2 - PLAYER_WIDTH // 2
         y = PLAYER_START_Y
         super().__init__(x, y, PLAYER_WIDTH, PLAYER_HEIGHT)
+        self.is_paused = is_paused
         self.speed = PLAYER_SPEED
         self.spaceship = spaceship
         self.shot_color = bullet_color
@@ -34,6 +34,7 @@ class Player(Entity):
 
     # Initiate spaceship position when starts new game
     def reset(self):
+        self.bullets = []
         self.rect.x = SCREEN_WIDTH // 2 - PLAYER_WIDTH // 2
         self.rect.y = PLAYER_START_Y
 
@@ -43,7 +44,7 @@ class Player(Entity):
         if now - self.last_shot_time >= self.shoot_cooldown:
             bullet_x = self.rect.centerx - 5
             bullet_y = self.rect.top
-            bullet = Bullet(bullet_x, bullet_y, self.shot_color)
+            bullet = Bullet(bullet_x, bullet_y, self.shot_color, self.is_paused)
             self.bullets.append(bullet)
             self.last_shot_time = now
 

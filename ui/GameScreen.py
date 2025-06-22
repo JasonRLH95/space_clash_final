@@ -1,4 +1,4 @@
-
+import pygame
 
 from space_clash_final_folder.space_clash_final.logic.Game import Game
 from space_clash_final_folder.space_clash_final.assets.assets import *
@@ -16,6 +16,9 @@ class GameScreen:
 
     # Handle events of pressing the pause or back to ment buttons
     def handle_event(self, event):
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_p or event.key == pygame.K_ESCAPE:
+                self.game.toggle_pause()
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             mouse_pos = pygame.mouse.get_pos()
 
@@ -33,7 +36,7 @@ class GameScreen:
             score_data = {"score": self.game.get_score()}
             self.switch_screen(SCREEN_GAME_OVER, score_data)
 
-    # Handles the drawing all the objects on the screen, the game it self, the settings and so on
+    # Handles the drawing all the objects on the screen, the game itself, the settings and so on
     def draw(self):
         self.screen.fill(WHITE)
 

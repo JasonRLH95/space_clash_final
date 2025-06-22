@@ -4,9 +4,10 @@ from space_clash_final_folder.space_clash_final.assets.assets import *
 
 
 class Bullet(Entity):
-    def __init__(self, bullet_x, bullet_y, color):
+    def __init__(self, bullet_x, bullet_y, color, is_paused):
         super().__init__(bullet_x, bullet_y, BULLET_WIDTH, BULLET_HEIGHT, color)
         self.speed = BULLET_SPEED
+        self.is_paused = is_paused
 
     # Update bullet movement
     def update(self):

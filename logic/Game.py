@@ -10,11 +10,11 @@ from space_clash_final_folder.space_clash_final.logic.Explosion import Explosion
 class Game:
     def __init__(self, game_settings):
         self.game_settings = game_settings
-        self.player = Player(game_settings["spaceship"], game_settings["bullet_color"])
+        self.is_paused = False
+        self.player = Player(game_settings["spaceship"], game_settings["bullet_color"], self.is_paused)
         self.meteor_manager = MeteorManager()
         self.collision_handler = CollisionHandler()
         self.score_manager = ScoreManager()
-        self.is_paused = False
         self.is_game_over = False
         self.explosions = []
 
