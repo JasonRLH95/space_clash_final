@@ -1,8 +1,8 @@
 
 
 import random
-from p2.interfaces.Entity import Entity
-from p2.assets.assets import *
+from space_clash_final_folder.space_clash_final.interfaces.Entity import Entity
+from space_clash_final_folder.space_clash_final.assets.assets import *
 
 
 class Meteor(Entity):

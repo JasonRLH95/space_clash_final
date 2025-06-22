@@ -1,7 +1,7 @@
 
 
-from p2.logic.ScoreManager import ScoreManager
-from p2.utils.Settings import *
+from space_clash_final_folder.space_clash_final.logic.ScoreManager import ScoreManager
+from space_clash_final_folder.space_clash_final.utils.Settings import *
 
 
 class HighScoresScreen:

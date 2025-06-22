@@ -1,8 +1,8 @@
 
 
 import time
-from p2.utils.FileUtils import FileUtils
-from p2.utils.Settings import SCORE_PER_DODGE
+from space_clash_final_folder.space_clash_final.utils.FileUtils import FileUtils
+from space_clash_final_folder.space_clash_final.utils.Settings import SCORE_PER_DODGE
 
 
 class ScoreManager:

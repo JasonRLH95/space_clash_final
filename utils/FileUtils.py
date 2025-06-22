@@ -3,7 +3,7 @@ File handling utilities
 """
 
 import json
-from p2.utils.Settings import RECORDS_FILE_PATH
+from space_clash_final_folder.space_clash_final.utils.Settings import RECORDS_FILE_PATH
 
 
 class FileUtils:
