@@ -1,6 +1,6 @@
 
-from space_clash_final_folder.space_clash_final.interfaces.Entity import Entity
-from space_clash_final_folder.space_clash_final.assets.assets import *
+from interfaces.Entity import Entity
+from assets.assets import *
 
 
 class Bullet(Entity):

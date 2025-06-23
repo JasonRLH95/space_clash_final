@@ -1,6 +1,6 @@
 
 import os
-from space_clash_final_folder.space_clash_final.utils.Settings import *
+from utils.Settings import *
 
 pygame.font.init()
 pygame.mixer.init()

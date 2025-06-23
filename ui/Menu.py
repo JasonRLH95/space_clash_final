@@ -1,11 +1,11 @@
 
 
 import sys
-from space_clash_final_folder.space_clash_final.ui.ChoosePlayerScreen import ChoosePlayerScreen
-from space_clash_final_folder.space_clash_final.ui.GameScreen import GameScreen
-from space_clash_final_folder.space_clash_final.ui.GameOverScreen import GameOverScreen
-from space_clash_final_folder.space_clash_final.ui.HighScoresScreen import HighScoresScreen
-from space_clash_final_folder.space_clash_final.assets.assets import *
+from ui.ChoosePlayerScreen import ChoosePlayerScreen
+from ui.GameScreen import GameScreen
+from ui.GameOverScreen import GameOverScreen
+from ui.HighScoresScreen import HighScoresScreen
+from assets.assets import *
 
 
 class Menu:

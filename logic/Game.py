@@ -1,10 +1,10 @@
 
-from space_clash_final_folder.space_clash_final.logic.Player import Player
-from space_clash_final_folder.space_clash_final.logic.Meteor import MeteorManager
-from space_clash_final_folder.space_clash_final.logic.CollisionHandler import CollisionHandler
-from space_clash_final_folder.space_clash_final.logic.ScoreManager import ScoreManager
-from space_clash_final_folder.space_clash_final.assets.assets import *
-from space_clash_final_folder.space_clash_final.logic.Explosion import Explosion
+from logic.Player import Player
+from logic.Meteor import MeteorManager
+from logic.CollisionHandler import CollisionHandler
+from logic.ScoreManager import ScoreManager
+from assets.assets import *
+from logic.Explosion import Explosion
 
 
 class Game:

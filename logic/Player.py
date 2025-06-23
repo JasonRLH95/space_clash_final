@@ -1,7 +1,7 @@
 
-from space_clash_final_folder.space_clash_final.interfaces.Entity import Entity
-from space_clash_final_folder.space_clash_final.utils.Settings import *
-from space_clash_final_folder.space_clash_final.logic.Bullet import Bullet
+from interfaces.Entity import Entity
+from utils.Settings import *
+from logic.Bullet import Bullet
 
 
 class Player(Entity):

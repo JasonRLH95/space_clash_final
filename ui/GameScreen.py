@@ -1,7 +1,7 @@
 import pygame
 
-from space_clash_final_folder.space_clash_final.logic.Game import Game
-from space_clash_final_folder.space_clash_final.assets.assets import *
+from logic.Game import Game
+from assets.assets import *
 
 
 class GameScreen:
