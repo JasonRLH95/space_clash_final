@@ -12,11 +12,13 @@ class Game:
         self.game_settings = game_settings
         self.is_paused = False
         self.player = Player(game_settings["spaceship"], game_settings["bullet_color"], self.is_paused)
+        self.chapter_pass = False
         self.meteor_manager = MeteorManager()
         self.collision_handler = CollisionHandler()
         self.score_manager = ScoreManager()
         self.is_game_over = False
         self.explosions = []
+        self.chapter_pause_timer = 0
 
     # Handles the game functionality
     def update(self):

@@ -8,7 +8,7 @@ class Player(Entity):
     def __init__(self, spaceship, bullet_color, is_paused):
         x = SCREEN_WIDTH // 2 - PLAYER_WIDTH // 2
         y = PLAYER_START_Y
-        super().__init__(x, y, PLAYER_WIDTH, PLAYER_HEIGHT)
+        super().__init__(x, y, PLAYER_WIDTH, PLAYER_HEIGHT, None, spaceship)
         self.is_paused = is_paused
         self.speed = PLAYER_SPEED
         self.spaceship = spaceship

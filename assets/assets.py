@@ -27,16 +27,16 @@ YELLOW_SPACESHIP_IMAGE = pygame.image.load(os.path.join("assets", "images", "spa
 
 # Spaceships
 WHITE_SPACESHIP = pygame.transform.rotate(
-    pygame.transform.scale(WHITE_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 0)
+    pygame.transform.scale(WHITE_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 0).convert_alpha()
 
 RED_SPACESHIP = pygame.transform.rotate(
-    pygame.transform.scale(RED_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 0)
+    pygame.transform.scale(RED_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 0).convert_alpha()
 
 BLUE_SPACESHIP = pygame.transform.rotate(
-    pygame.transform.scale(BLUE_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 90)
+    pygame.transform.scale(BLUE_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 90).convert_alpha()
 
 YELLOW_SPACESHIP = pygame.transform.rotate(
-    pygame.transform.scale(YELLOW_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 270)
+    pygame.transform.scale(YELLOW_SPACESHIP_IMAGE, (PLAYER_WIDTH, PLAYER_HEIGHT)), 270).convert_alpha()
 
 # Backgrounds
 SPACE_MAIN = pygame.transform.scale(
@@ -53,13 +53,13 @@ SPACE_4 = pygame.transform.scale(
 
 # Meteors
 METEOR_1 = pygame.transform.scale(
-    pygame.image.load(os.path.join("assets", "images", "meteor_1.png")), (METEOR_WIDTH, METEOR_HEIGHT))
+    pygame.image.load(os.path.join("assets", "images", "meteor_1.png")), (METEOR_WIDTH, METEOR_HEIGHT)).convert_alpha()
 METEOR_2 = pygame.transform.scale(
-    pygame.image.load(os.path.join("assets", "images", "meteor_2.png")), (METEOR_WIDTH, METEOR_HEIGHT))
+    pygame.image.load(os.path.join("assets", "images", "meteor_2.png")), (METEOR_WIDTH, METEOR_HEIGHT)).convert_alpha()
 METEOR_3 = pygame.transform.scale(
-    pygame.image.load(os.path.join("assets", "images", "meteor_3.png")), (METEOR_WIDTH, METEOR_HEIGHT))
+    pygame.image.load(os.path.join("assets", "images", "meteor_3.png")), (METEOR_WIDTH, METEOR_HEIGHT)).convert_alpha()
 METEOR_4 = pygame.transform.scale(
-    pygame.image.load(os.path.join("assets", "images", "meteor_4.png")), (METEOR_WIDTH, METEOR_HEIGHT))
+    pygame.image.load(os.path.join("assets", "images", "meteor_4.png")), (METEOR_WIDTH, METEOR_HEIGHT)).convert_alpha()
 
 # Explosion
 EXPLOSION_IMAGE = pygame.transform.scale(
